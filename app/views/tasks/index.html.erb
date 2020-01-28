@@ -4,7 +4,9 @@
   <li>
     <input type="checkbox" <%= task.completed ? 'checked' : '' %>>
     <%= link_to task.title, task_path(task) %>
-    <%= link_to "delete", task_delete_path(task), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to task_delete_path(task), method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <i class="fa fa-trash-o" aria-hidden="true"></i>
+    <% end %>
   </li>
   <% end %>
 </ul>

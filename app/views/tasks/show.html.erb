@@ -1,5 +1,6 @@
 <h1>Task detail</h1>
 <p><%= @task.details %></p>
+<div><%= link_to "Edit task", task_edit_path(@task) %></div>
 
 <div>
 <% if @task.completed %>
